@@ -1,0 +1,342 @@
+
+// $primary-color:#9e2421;
+// $secondary-color:#853836;    Erster Anlauf
+// $tertiary-color:#219c9e;
+
+// $primary-color:#03ddff;
+// $secondary-color: rgb(40, 172, 192);  //verhältnis (1, 4,2917, 4,7917) zweiter anlauf
+
+// $primary-color:#ff5e00;
+// $secondary-color: rgb(200, 98, 40);    // Verhältnis (5, 2,4565, 1) dritter anlauf
+
+$primary-color: rgb(10, 10, 10);
+$secondary-color: rgb(246,246,246);     //Vierter Anlauf
+
+
+@font-face {
+    src: url(/fonts/GreatVibes-Regular.ttf);
+    font-family: 'greatVibes_regular';
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    src: url(/fonts/Oxygen-Regular.ttf);
+    font-family: 'oxygen-regular';
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    src: url(/fonts/Viga-Regular.ttf);
+    font-family: 'viga-regular';
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+li, a{
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    font-family: 'viga-regular', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    color: rgb(21, 21, 21);
+    background-color: rgb(235, 235, 235);
+}
+
+//nav farben für vierten anlauf, box shadow einrichtung erfolgt auch hier
+nav{
+    color:rgb(235, 235, 235);
+    background-color: rgb(21, 21, 21);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    overflow: hidden;
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    text-align: center;
+    align-items: center;
+}
+
+main{
+    margin-top: 10vh;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.3);
+}
+
+h2
+{
+    font-family: 'viga-regular', sans-serif; 
+    font-size: 3.6vh;
+}
+
+p
+{
+    font-family: 'oxygen-regular', sans-serif;
+    font-size: 2.5vh;
+}
+
+img{
+    box-shadow: 0 0 7px 7px;
+}
+
+
+.duo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    button{
+        text-align: center;
+        padding: 0;
+        color: rgb(246,246,246);
+        background-color: rgb(10, 10, 10);
+        font-family: 'viga-regular', sans-serif;
+        font-size: x-large;
+        font-weight: bold;
+        border-radius: 15px;
+        transition: 200ms;
+        &:hover {
+            font-size: normal;
+            font-weight: normal;
+        }
+    }
+}
+
+
+@media (max-width: 425px) {
+
+    /*#alpha::after{ 
+        content: "/About me";
+    }
+    #beta{
+        display: none;
+    }*/
+    #NameTag{ display: none;   }
+    #zeta{
+        display: none;
+    }
+
+    nav{
+    justify-content: flex-end;
+        li{
+            margin: auto;
+        }
+    }
+
+    img{
+        margin: 0;
+        padding: 0;
+        position: inherit;
+        left: -200px;
+        width: 100vw;
+        height: 90vh;
+        box-shadow: none;
+    }
+
+    .uno{
+        height: 90vh;
+        width: 100vw;
+        h2, p{
+            padding: 0;
+            margin: 1em;
+        }
+    }
+
+    .duo{
+        button{
+            height: 6vh;
+            width: 50vw;
+            margin: 1vh;
+            font-size: larger;
+            &:hover{
+                height: 6.5vh;
+                width: 54.16vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) and (min-width: 426px) {
+
+    #alpha::after{ 
+        content: "/About me";
+    }
+    #beta{
+        display: none;
+    }
+    #gamma::after{
+        content: "/Contact"
+    }
+    #delta{
+        display: none;
+    }
+    #NameTag{
+        justify-self: flex-start;
+        font-family: 'greatVibes_regular', sans-serif;
+        font-size: 2.3em;
+        font-weight: normal;
+        margin: 0 2.5em;
+    }
+    #epsilon{
+        display: none;
+    }
+
+    nav{
+    justify-content: space-between;
+        li{
+            margin: 0 2em 0 0;
+            font-size: 1.3em;
+        }
+    }
+
+    .img{
+        display: flex;
+        margin: 0;
+        padding: 0;
+        position: inherit;
+        width: 50vw;
+        height: 90vh;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 95%;
+            height: 85%;
+        }
+    }
+
+    .uno{
+        height: 90vh;
+        width: 50vw;
+        h2{
+            padding: 0;
+            margin: 7vh 1.55vw 0.5em 1.55vw;
+        }
+        p{
+            padding: 0;
+            margin: 0.5em 1.55vw 0 1.55vw;
+        }
+    }
+
+    .duo{
+        button{
+            height: 5vh;
+            width: 27vw;
+            margin: 0.5vh;
+            &:hover{
+                height: 5.5vh;
+                width: 29.7vw;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 769px)
+{
+    #alpha::after{ 
+        content: "/About me";
+    }
+    #beta{
+        display: none;
+    }
+    #gamma::after{
+        content: "/Contact"
+    }
+    #delta{
+        display: none;
+    }
+    #NameTag{
+        justify-self: flex-start;
+        font-family: 'greatVibes_regular', sans-serif;
+        font-size: 3.2em;
+        font-weight: normal;
+        margin: 0 2.5em;
+    }
+    #epsilon{
+        display: none;
+    }
+
+    body{
+        background-color: $secondary-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    nav{
+    justify-content: space-between;
+        li{
+            margin: 0 2em 0 0;
+            font-size: 1.75em;
+        }
+    }
+
+    main{
+        height: inherit;
+        width: 80vw;
+        background-color: rgb(235, 235, 235);
+        color: rgb(21, 21, 21);
+    }
+
+
+    .img{
+        display: flex;
+        margin: 0;
+        padding: 0;
+        position: inherit;
+        width: 40vw;
+        height: 90vh;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 95%;
+            height: 85%;
+        }
+    }
+
+    .uno{
+        height: 90vh;
+        width: 40vw;
+        h2{
+            padding: 0;
+            margin: 7vh 1.55vw 0.5em 1.55vw;
+        }
+        p{
+            padding: 0;
+            margin: 0.5em 1.55vw 0 1.55vw;
+        }
+        li{
+            font-size: 1.5em;
+        }
+    }
+    .duo{
+        button{
+            height: 5vh;
+            width: 20vw;
+            margin: 0.6vh;
+            &:hover{
+                height: 5.5vh;
+                width: 22vw;
+            }
+        }
+    }
+}
