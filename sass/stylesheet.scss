@@ -92,10 +92,16 @@ p
     font-size: 2.5vh;
 }
 
-img{
+img, #portrait{
     box-shadow: 0 0 7px 7px;
+    height: 90vh;
 }
 
+#portrait{
+    background-image: url("/Businesslook_fullfrontal_geschnitten.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 .duo{
     display: flex;
@@ -140,14 +146,17 @@ img{
         }
     }
 
-    img{
+    img, #portrait{
         margin: 0;
         padding: 0;
         position: inherit;
         left: -200px;
         width: 100vw;
-        height: 90vh;
         box-shadow: none;
+    }
+
+    #portrait{
+        background-image: url("/Businesslook_fullfrontal_geschnitten_mobile.jpg");
     }
 
     .uno{
@@ -215,7 +224,7 @@ img{
         height: 90vh;
         justify-content: center;
         align-items: center;
-        img{
+        img, #portrait{
             width: 95%;
             height: 85%;
         }
@@ -309,7 +318,7 @@ img{
         height: 90vh;
         justify-content: center;
         align-items: center;
-        img{
+        img, #portrait{
             width: 95%;
             height: 85%;
         }
